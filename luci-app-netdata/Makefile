@@ -1,27 +1,24 @@
-# Netdata <https://github.com/netdata/netdata>
-# Copyright (C) 2022-2024 muink <https://github.com/muink>
+# Copyright (C) 2016 Openwrt.org
+# Copyright (C) 2020-2021 sirpdboy <herboy2008@gmail.com>
+# https://github.com/sirpdboy/luci-app-netdata for  v 1.33.1 cn
+# This is free software, licensed under the Apache License, Version 2.0 .
 #
-# This is free software, licensed under the GNU General Public License v3.
-# See /LICENSE for more information.
-#
+
 include $(TOPDIR)/rules.mk
 
-LUCI_NAME:=luci-app-netdata
+LUCI_TITLE:=LuCI support for Netdata
+LUCI_DEPENDS:=+netdata
+LUCI_PKGARCH:=all
 
-LUCI_TITLE:=LuCI Netdata
-LUCI_DEPENDS:=+netdata-ssl +openssl-util
+PKG_NAME:=luci-app-netdata
+PKG_VERSION:=1.3
+PKG_RELEASE:=20240303
 
-LUCI_DESCRIPTION:=Real-time performance monitoring
-
-define Package/$(LUCI_NAME)/conffiles
+define Build/Compile
 endef
 
-define Package/$(LUCI_NAME)/postinst
-endef
-
-define Package/$(LUCI_NAME)/prerm
-endef
 
 include $(TOPDIR)/feeds/luci/luci.mk
 
 # call BuildPackage - OpenWrt buildroot signature
+
