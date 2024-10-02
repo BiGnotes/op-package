@@ -1,1 +1,1 @@
-# 自用openwrt-package仓库，仅适用于最新版的LEDE
+# 自用openwrt-package仓库，适用于最新版的LEDE
